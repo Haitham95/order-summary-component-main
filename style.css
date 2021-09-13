@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+  --pale-blue: #e0e8ff;
+  --bright-blue: #3829e0;
+  --very-pale-blue: #f5f7ff;
+  --desturated-blue: #7280a7;
+  --dark-blue: #1f2f56;
+}
+
+/* font-family: 'Red Hat Display', sans-serif; */
+
+/* Basic setup */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 16px;
+  background-color: var(--pale-blue);
+  overflow-x:  hidden;
+}
+
+/* usable */
+
+.container {
+  height: 97vh;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* styles */
+
+.card {
+  width: 450px;
+  text-align: center;
+  background-color: var(--very-pale-blue);
+  border-radius: 10px;
+}
+
+
+.card.flex {
+  flex-direction: column;
+}
+
+.img {
+  background-image: url(images/illustration-hero.svg);
+  height: 220px;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-Right-radius: 10px;
+  margin-bottom: 20px;
+  background-position: center;
+}
+
+.card__text h1,h2 {
+  font-size: 30px;
+  padding-bottom: 5px;
+  color: var(--dark-blue);
+}
+
+.card__text p {
+  font-size: 16px;
+  font-weight: 500;
+  padding-bottom: 5px;
+  color: var(--desturated-blue);
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.card__plan.flex {
+  justify-content: space-between;
+}
+
+.card__plan {
+  background-color: #fff;
+  max-width: 400px;
+  margin: 20px auto 20px auto;
+  padding: 10px 10px;
+  border-radius: 15px;
+}
+
+.plan__text .icon {
+  padding-right: 10px;
+}
+
+.text.flex {
+  flex-direction: column;
+}
+
+.text h2 {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.plan__btn a {
+  color: var(--bright-blue);
+  font-weight: 700;
+}
+
+.card__btns.flex {
+  flex-direction: column;
+  width: 100%;
+}
+
+.btn{
+  width: 80%;
+  text-decoration: none;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: var(--desturated-blue);
+}
+
+.primary {
+  background-color: var(--bright-blue);
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 3px 5px 50px var(--desturated-blue);
+}
+
+/* playing ground */
+
+@keyframes rotate {
+  0% {
+    transform: translateY(0);
+
+  }
+
+  33% {
+    transform: translateY(-100px);
+  }
+
+  66% {
+    transform: translateY(100px);
+  }
+
+
+  99% {
+    transform: translateY(0);
+  }
+}
+
+.animate {
+  animation: 0.5s  infinite ease-in-out rotate;
+  transition: ease-in;
+}
+
+
+
